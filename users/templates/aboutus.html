@@ -1,0 +1,81 @@
+<!-- about_us.html -->
+{% extends 'users/base.html' %}
+
+{% block content %}
+  <div id="about-us-container">
+
+
+
+    <h3>Meet the Team</h3>
+    <ul id="team-list">
+      <li>
+        <strong>Khyati Makhija</strong>: makhijak@uwindsor.ca
+      </li>
+      <li>
+        <strong>Suraj Yadav</strong>: yadav24@uwindsor.ca
+      </li>
+      <li>
+        <strong>Aryan Gaur</strong>: gaur5@uwindsor.ca
+      </li>
+      <li>
+        <strong>Yang Wang</strong>: wang11b5@uwindsor.ca
+      </li>
+    </ul>
+    <!-- Add more content as needed -->
+  </div>
+
+  <script>
+    // Add interactivity, e.g., highlight team members on hover
+    const teamList = document.getElementById('team-list');
+    teamList.addEventListener('mouseover', function (event) {
+      if (event.target.tagName === 'LI') {
+        event.target.classList.add('highlighted');
+      }
+    });
+
+    teamList.addEventListener('mouseout', function (event) {
+      if (event.target.tagName === 'LI') {
+        event.target.classList.remove('highlighted');
+      }
+    });
+  </script>
+
+  <style>
+    /* Add professional styling */
+    #about-us-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    h3 {
+      color: #555;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    li:hover {
+      background-color: #f5f5f5;
+    }
+
+    .highlighted {
+      background-color: #e0f7fa;
+    }
+  </style>
+{% endblock %}
+
+
